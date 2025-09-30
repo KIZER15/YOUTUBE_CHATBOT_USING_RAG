@@ -1,37 +1,49 @@
 # YouTube RAG Chatbot 💬
 
-This project is a Chrome extension that acts as an intelligent chatbot for YouTube videos. It uses a local Retrieval-Augmented Generation (RAG) backend to analyze the video's transcript and answer user questions in real-time.
-
-
----
-
-## ## Features
-
--   **Instant Q&A:** Ask questions about the content of the YouTube video you're currently watching.
--   **Dynamic UI:** A clean, modern, and responsive chat interface built with HTML, CSS, and JavaScript.
--   **Local RAG Backend:** The entire AI pipeline runs on your local machine, ensuring privacy and control.
--   **Easy Installation:** Loads as an unpacked extension in any Chromium-based browser (like Chrome, Brave, or Edge).
+An intelligent Chrome extension chatbot for YouTube videos. It leverages a **local Retrieval-Augmented Generation (RAG) backend** to analyze video transcripts and answer user questions in real-time.
 
 ---
 
-## ## Tech Stack
+## Features
 
--   **Frontend (Chrome Extension):**
-    -   `HTML` (`popup.html`)
-    -   `CSS` (`style.css`)
-    -   `JavaScript` (`popup.js`)
--   **Backend (Local Server):**
-    -   `Python`
-    -    `FastAPI` for the web server (`main.py`).
-    -   Libraries for RAG pipeline (e.g., `langchain`, `transformers`, `faiss-cpu`) listed in `requirements.txt`.
+- **Instant Q&A:** Ask questions about the content of the YouTube video you are currently watching.  
+- **Dynamic UI:** Clean, modern, and responsive chat interface built with HTML, CSS, and JavaScript.  
+- **Local RAG Backend:** All AI processing runs locally, ensuring privacy and control.  
+- **Easy Installation:** Load as an unpacked extension in any Chromium-based browser (Chrome, Brave, Edge).
 
 ---
 
-## RAG Architecture :
-![Chain_architecture]('chain_architecture.png')
+## Tech Stack
+
+### Frontend (Chrome Extension)
+- `HTML` (`popup.html`)
+- `CSS` (`style.css`)
+- `JavaScript` (`popup.js`)
+
+### Backend (Local Server)
+- `Python`
+- `FastAPI` for API server (`main.py`)
+- RAG Libraries:
+  - `langchain`
+  - `transformers`
+  - `faiss-cpu`
+  - Others listed in `requirements.txt`
 
 ---
-## ## Folder Structure
+
+## RAG Architecture
+
+![Chain Architecture](chain_architecture.png)
+
+*Illustration of the RAG pipeline showing retrieval, vector store, and LLM components.*
+
+---
+
+## Folder Structure
+
+
+---
+### Folder Structure
 
 Here is an overview of the key files in this project:
 
@@ -48,16 +60,16 @@ Here is an overview of the key files in this project:
 
 ---
 
-## ## Setup and Installation
+### Setup and Installation
 
 To get this project running, you need to set up the Python backend and then install the Chrome extension.
 
-### ### Prerequisites
+### Prerequisites
 
 -   **Python 3.8+**
 -   **Google Chrome** or another Chromium-based browser.
 
-### ### 1. Backend Setup
+### 1. Backend Setup
 
 First, set up and run the local Python server which will handle the AI logic.
 
@@ -102,7 +114,7 @@ uvicorn main:app --reload
 
 The server should now be running on `http://127.0.0.1:8000`. Keep this terminal window open.
 
-### ### 2. Frontend (Chrome Extension) Setup
+### 2. Frontend (Chrome Extension) Setup
 
 Next, load the extension into your browser.
 
@@ -114,7 +126,7 @@ Next, load the extension into your browser.
 
 ---
 
-## ## Usage
+### Usage
 
 1.  Pin the extension to your toolbar for easy access.
 2.  Navigate to any YouTube video page.
