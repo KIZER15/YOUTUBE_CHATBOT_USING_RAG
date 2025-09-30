@@ -34,6 +34,7 @@ An intelligent Chrome extension chatbot for YouTube videos. It leverages a **loc
 ## RAG Architecture
 
 ![Chain Architecture](chain_architecture.png)
+![High level RAG overview](high_level_RAG_architecture.png)
 
 *Illustration of the RAG pipeline showing retrieval, vector store, and LLM components.*
 ---
