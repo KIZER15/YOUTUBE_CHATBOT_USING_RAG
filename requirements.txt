@@ -7,6 +7,6 @@ faiss-cpu
 tiktoken
 python-dotenv
 sentence-transformers
-youtube-transcript-api
 fastapi
 uvicorn
+googletrans==4.0.0-rc1
