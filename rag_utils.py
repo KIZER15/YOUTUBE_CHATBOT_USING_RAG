@@ -7,6 +7,9 @@ from langchain_core.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from googletrans import Translator 
 from dotenv import load_dotenv
+from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
+
+
 
 
 load_dotenv()
@@ -27,9 +30,6 @@ prompt = PromptTemplate(
     input_variables=['context', 'question']
 )
 
-
-from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
-from googletrans import Translator
 
 def fetch_transcript(video_id: str) -> str:
     try:
