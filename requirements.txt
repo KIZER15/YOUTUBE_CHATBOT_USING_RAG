@@ -8,3 +8,5 @@ tiktoken
 python-dotenv
 sentence-transformers
 youtube-transcript-api
+fastapi
+uvicorn
